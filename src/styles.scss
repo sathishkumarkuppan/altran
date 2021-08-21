@@ -1,1 +1,132 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import "~src/assets/variable";
+
+.app-container {
+    font-family: -webkit-pictograph;
+    .body-container {
+         min-height: calc(100vh - 120px);
+    }
+    a {
+        text-decoration: none;
+        color: $darkgrey;
+    }
+}
+
+header {
+    height         : 80px;
+    width          : 100%;
+    justify-content: space-between;
+    align-items    : center;
+    border-bottom: solid thin $lgey;
+    //background-color: $wgrey;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+
+    .logo {
+        a {
+          display: block;
+
+          img {
+              max-width: 140px;
+              display: block;
+          }
+        }
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        padding: 10px 5px;
+        color: $altronBlue;
+        .main {
+            font-size: 28px;
+            font-family: -webkit-pictograph;
+            font-weight: bolder;
+            .desc {
+                font-size: 14px;
+                font-family: cursive;
+            }
+        }
+        
+    }
+}
+
+
+footer {
+    height         : 40px;
+    width          : 100%;
+    justify-content: space-between;
+    align-items    : center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: $wgrey;
+    color: white;
+    text-align: center;
+    border-top: solid thin $lgey;
+    .footer-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer-left {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            a {
+                font-size  : 12px;
+                font-weight: 400;
+                color      : $greyaa;
+                padding    : 0 10px;
+                position   : relative;
+                line-height: 17px;
+            }
+        }
+        .footer-right {        
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding-right: 10px;
+            .footer-links {
+                justify-content: flex-end;
+                align-items    : center;
+
+                a {
+                    font-size  : 12px;
+                    font-weight: 400;
+                    color      : $greyaa;
+                    padding    : 0 10px;
+                    position   : relative;
+                    line-height: 17px;
+
+                    &::before {
+                        content : "|";
+                        position: absolute;
+                        left    : 0;
+                        top     : 0;
+                    }
+
+                    &:first-child {
+                        &::before {
+                        content: "";
+                        }
+                    }
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            p {
+                margin-bottom: 0;
+                font-size    : 12px;
+                font-weight  : 400;
+                color        : $greyaa;
+                line-height  : 17px;
+                text-align   : right;
+            }
+        }
+    }
+
+}
